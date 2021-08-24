@@ -8,7 +8,7 @@ This is just the front end UI.
 
 You must grab (link to my file) and flash it to the ESP8266 on the Sonoff board (make a link for these instructions)
 
-Relay is the Android/iOS App used to detect the customer web servers you create, and toggle the relay (power to the plugged in devices) on and off remotely.
+Relay is the Android/iOS App used to detect the sonoff devices that you've flashed, and toggle the relay on and off remotely.
 
 'Remote' current means you have to be on the local network which these sonoff switches belong to.
 
