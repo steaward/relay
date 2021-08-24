@@ -1,0 +1,51 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="relay.MainPage"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+    <!--<StackLayout Padding="{OnPlatform iOS='30,60,30,30', Default='30'}">-->
+        <Grid RowSpacing="25" RowDefinitions="Auto,Auto,Auto,Auto, *">
+
+            <Label Text="Good Evening."
+                Grid.Row="0"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="CenterAndExpand" 
+                Padding="0,20,10,0"/>
+
+            <!--<Label Text="Click here to detect all relay devices on your network."
+                Grid.Row="0"
+                LineBreakMode="WordWrap"
+                FontSize="16"
+                HorizontalOptions="CenterAndExpand"
+                Padding="30, 0,0 ,0 "/>-->
+
+            <Label Text="No Devices Found"
+                Grid.Row="1"
+                FontSize="18"
+                FontAttributes="Bold"
+                x:Name="DeviceLabel"
+                HorizontalOptions="Center" />
+
+            <Button Text="Detect Devices"
+                Grid.Row="3"
+                Clicked="DetectDevices"
+                HorizontalOptions="Center" />
+
+            <CollectionView x:Name="CollectionRelayView" Grid.Row="4" ItemsSource="{Binding Relays}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="Description"></Label>
+                                <Entry Text="{Binding Description}"></Entry>
+                            </StackLayout>
+                            <Button Text="Toggle" ClassId="{Binding DeviceName}" Clicked="ToggleDevice" HorizontalOptions="Center" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </Grid>
+    <!--</StackLayout>-->
+</ContentPage>

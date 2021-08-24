@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "relay.WinUI": {
+      "commandName": "MsixPackage",
+      "nativeDebugging": false
+    }
+  }
+}
