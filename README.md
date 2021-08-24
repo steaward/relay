@@ -20,3 +20,5 @@ Make the UI look better.
 Add 'Anchor' web server to this project, so that detecting devices works.
 Persist relay information on phone (less calls to API)
 
+
+Note: This thing is using .Net 6 preview. MAUI... It's super finicky because this preview is still buggy as heck. 
